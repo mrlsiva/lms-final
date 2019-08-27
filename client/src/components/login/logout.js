@@ -20,7 +20,7 @@ var Logout = inject("Store")(
     } 
 
     componentDidMount(){
-        const url = "https://lms-fleet-pro.herokuapp.com/api/list";
+        const url = "https://suguna.herokuapp.com/api/list";
         superagent.get(url).end((err, res) => {
             // Do something
             if(err){
@@ -28,7 +28,7 @@ var Logout = inject("Store")(
 
             }
             console.log(JSON.parse(res.body));
-            window.location = 'https://lms-fleet-pro.herokuapp.com/'
+            window.location = 'https://suguna.herokuapp.com/'
           });
 
           this.setState({

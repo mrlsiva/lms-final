@@ -14,7 +14,7 @@ class Header extends React.Component {
 
     logoutHandler = () => {
         // Store.activeUser = "Guest";
-        const activeUserApi = "https://lms-fleet-pro.herokuapp.com/api/user";
+        const activeUserApi = "https://suguna.herokuapp.com/api/user";
         superagent.post(activeUserApi).send({ name: "Guest" }).set('accept', 'json').end((err, res) => {
             // Calling the end function will send the request
             console.log("User request: ", res, err);
@@ -22,7 +22,7 @@ class Header extends React.Component {
     }
 
     componentDidMount(){
-        const url = "https://lms-fleet-pro.herokuapp.com/api/list";
+        const url = "https://suguna.herokuapp.com/api/list";
         superagent.get(url).end((err, res) => {
             if(err){
                 throw err;
